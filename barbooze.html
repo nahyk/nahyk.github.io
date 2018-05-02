@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Barbooze</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css"/>
+        <script src="JS/newjavascript.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>      <!-- Ici pas de tableau pour une page simple comme cella là-->
@@ -53,5 +50,50 @@ and open the template in the editor.
                 <img style="center" src='logotwit.png' width='100' height='100' alt='twitter'>
             </a>
         </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Administration du site
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                Renseignez les champs ci-dessous.<br/>
+                <br/>
+                <form name="myProject2Form" onsubmit="return validateProjet2Form()" method="post" >
+                    Nom du projet :<br/>
+                    <input type="text" name="nameProject1" >
+                    <br>
+                    
+                    Texte de présentation du projet :<br/>
+                    <textarea id="descriproject2" name="descriprojet2" style="width:400px; height:100px;"></textarea>   <!-- Zone plus grande -->
+                    
+                    <br><br/>
+                    
+                    <input type="submit">
+                </form>
+                    
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+        </div>
+        
     </body>
 </html>

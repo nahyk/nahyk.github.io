@@ -5,6 +5,7 @@
         <title>Mathieu Weber1</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css"/>
+        <script src="JS/newjavascript.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
@@ -39,14 +40,16 @@
                         <a href="Algo.html">    <!--lien vers la page-->
                             <img style="float" src="demin.gif" width="180" height="210" alt="Projet Algo">      <!-- Logo du projet-->
                             <br/>
-                            <span>Projet Algo</span>
                         </a>
+                        <div class ="NomProjet1" id="NomProjet1">Projet Algo</div>
+                       
                     </div>
                     <div class="case2">             <!-- 2eme projet-->
                         <a href="barbooze.html">    <!--lien vers la page-->
                             <img style="float" src="barbooze.jpg" width="180" height="210" alt="Barbooze">
-                            <br/>Barbooze
                         </a>
+                        <div class="NomProjet2" id="NomProjet2">Barbooze</div>
+                        
                     </div>
                     <div class="case3"></div>   <!-- Projets futurs -->
                     <div class="case4"></div>
@@ -62,6 +65,51 @@
                 <button><a href="admin.html">Admin</a></button>
             </div>
   
+        </div>
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Administration du site
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                Renseignez les champs ci-dessous.<br/>
+                <br/>
+                <form name="myProjectForm" onsubmit="return validateProjetForm()" method="post" >
+                    Nom de votre 1er projet :<br/>
+                    <input type="text" name="Projet1" >
+                    <br>
+                    Nom de votre 2nd projet : <br/>
+                    <input type="text" name="Projet2">
+                    
+                    
+                    
+                    <br/>
+                    <br/>
+                    
+                    <input type="submit">
+                </form>
+                    
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
         </div>
     </body>
 </html>

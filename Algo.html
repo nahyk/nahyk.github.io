@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Projet Algo</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css"/>
+        <script src="JS/newjavascript.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
@@ -19,7 +16,7 @@ and open the template in the editor.
                 <button>S'identifier</button>
                 <button>S'inscrire</button>
             </div>
-            <div class="titre">
+            <div id="titrepro1">
                 Projet d'Algo
             </div>
             <div class="menu">
@@ -33,18 +30,65 @@ and open the template in the editor.
             <img style="float:left" src="demin.gif" width="300" height="340" alt="Démineur">
         </h1>
         <br/><br/>
-        <h3>
-            Nous avons recrée le célèbre jeu Démineur programmé en langage C pendant deux semaines de projets. 
-        </h3>
-        <br/>
-        <h3>
-            Une interface très intuitive vous permet de sauvegarder votre partie, de charger des parties enregistrées, d'avoir un accès à des modes multi ou contre un IA.
-        </h3> 
-        <br/>
-        <h3> 
-            Pour toutes informations concernant le projet : mathieu.weber@isen.yncrea.fr 
-        </h3>
+        <div id="textpro1">
+            <h3>
+                Nous avons recrée le célèbre jeu Démineur programmé en langage C pendant deux semaines de projets. 
+            </h3>
+            <br/>
+            <h3>
+                Une interface très intuitive vous permet de sauvegarder votre partie, de charger des parties enregistrées, d'avoir un accès à des modes multi ou contre un IA.
+            </h3>
+            <br/>
+            <h3>
+                Pour toutes informations concernant le projet : mathieu.weber@isen.yncrea.fr 
+            </h3>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Administration du site
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                Renseignez les champs ci-dessous.<br/>
+                <br/>
+                <form name="myProject1Form" onsubmit="return validateProjet1Form()" method="post" >
+                    Nom de votre 1er projet :<br/>
+                    <input type="text" name="nameProjet1" >
+                    <br>
+                   <!-- Texte de présentation du projet :<br/>
+                    <textarea id="descriproject1" name="descriprojet1" style="width:400px; height:100px;"></textarea>   Zone plus grande -->
+                   
+                    <br/>
+                    <br/>
+                    
+                    <input type="submit">
+                </form>
+                    
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+        </div>
         
     </body>
+    
 </html>

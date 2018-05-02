@@ -3,51 +3,84 @@ function VerifMail(adresse)
 	
 	valide1 = false;
 	for(var j=1;j<(adresse.length);j++) {
-            if(adresse.charAt(j)=='@') {
+            if(adresse.charAt(j)==='@') {
                 if(j<(adresse.length-4)) {
                     for(var k=j;k<(adresse.length-2);k++) {
-                        if(adresse.charAt(k)=='.') valide1=true;
+                        if(adresse.charAt(k)==='.') valide1=true;
                     }
                 }
             }
 	}
 	
-	if(valide1==false) { 
+	if(valide1===false) { 
             
             return valide1;
 	}
-        if(valide1==true){
+        if(valide1===true){
             
             return valide1;
         }
     
 }
+
+
 
 function validateContactForm(){
     var c = document.forms["contactForm"]["email"].value;
     var b = document.forms["contactForm"]["firstname"].value;
     var a = document.forms["contactForm"]["lastname"].value;
     
-    if(b!=""){
-        if(a!=""){
-            if(c!="" && VerifMail(c)==true){
-                alert("Message envoyé")
+    if(b!==""){
+        if(a!==""){
+            if(c!=="" && VerifMail(c)===true){
+                alert("Message envoyé");
             }
             else{
-                alert("Veuillez saisir un adresse email valide.")
+                alert("Veuillez saisir un adresse email valide.");
             }
         }
         else{
-            alert("Veuillez saisir un nom valide")
+            alert("Veuillez saisir un nom valide");
         }
     }else{
-        alert("Veuillez saisir un prénom valide")
+        alert("Veuillez saisir un prénom valide");
     }
     
     return false;
 }
 
+function validateProjetForm(){
+    
+    var pro1=document.forms["myProjectForm"]["Projet1"].value;
+    document.getElementById("NomProjet1").innerHTML=pro1;
+    
+    var pro2=document.forms["myProjectForm"]["Projet2"].value;
+    document.getElementById("NomProjet2").innerHTML=pro2;
+    
+    return false;
+}
 
+/*function validateProjet1Form(){       Pareil le return false ne fonctionne pas ...
+    
+    var namepro1=document.forms["myProject1Form"]["nameProjet1"].value;
+    document.getElementsById("titrepro1").innerHTML=namepro1;
+    
+    var textpro1 = document.getElementById('Projet2').value.replace(/\n/g, "<br />");
+    document.getElementById("descriproject1").innerHTML = textpro1;
+    
+    return false;
+}*/
+
+/*function validateProjet2Form(){           Même avec le return false ça m'envoie Err_Empty_Response
+    
+    var namepro2 = document.forms["myProject2Form"]["nameProject1"].value;
+    document.getElementById("prenom").innerHTML = namepro2;
+    
+    var textpro2 = document.getElementById('descriproject1').value.replace(/\n/g, "<br />");
+    document.getElementById("textpro1").innerHTML = textpro2;
+    
+    return false;
+}*/
 
 function validateForm() {
     
