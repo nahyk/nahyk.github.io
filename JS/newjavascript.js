@@ -13,11 +13,11 @@ function VerifMail(adresse)
 	}
 	
 	if(valide1==false) { 
-            alert("Veuillez saisir une adresse email valide.");
+            
             return valide1;
 	}
         if(valide1==true){
-            alert("Message envoyé.");
+            
             return valide1;
         }
     
@@ -25,7 +25,25 @@ function VerifMail(adresse)
 
 function validateContactForm(){
     var c = document.forms["contactForm"]["email"].value;
-    VerifMail(c);
+    var b = document.forms["contactForm"]["firstname"].value;
+    var a = document.forms["contactForm"]["lastname"].value;
+    
+    if(b!=""){
+        if(a!=""){
+            if(c!="" && VerifMail(c)==true){
+                alert("Message envoyé")
+            }
+            else{
+                alert("Veuillez saisir un adresse email valide.")
+            }
+        }
+        else{
+            alert("Veuillez saisir un nom valide")
+        }
+    }else{
+        alert("Veuillez saisir un prénom valide")
+    }
+    
     return false;
 }
 
