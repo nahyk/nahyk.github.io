@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Me contacter</title>
+    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Me Contacter
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="question">      <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                <br/>
+                <form name="contactForm" onsubmit="return validateContactForm()">
+                    Prénom :<br>
+                    <input type="text" name="firstname" >
+                    <br>
+                    Nom :<br>
+                    <input type="text" name="lastname">
+                    <br>
+                    Adresse mail:<br/>
+                    <input type="text" name="email">
+                    <br/><br/>
+                    <textarea name="message" style="width:400px; height:200px;">Message à envoyer.</textarea>   <!-- Zone plus grande -->
+                    <br>
+                    <input type="submit">
+                </form>
+                    
+            </div>
+ 
+             
+            <div class="coord">         <!-- Mes coordonnées personnelles-->
+                <h2>
+                    <br/><br/><br/><br/>
+                    Téléphone : +33678430893
+                </h2>
+                <h2>
+                    Email : mathieu.weber@isen.yncrea.fr
+                </h2>
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+        </div>
+        <script src="JS/newjavascript.js"></script>
+    </body>
+</html>

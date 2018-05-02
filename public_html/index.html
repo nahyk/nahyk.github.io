@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title id="title">Mathieu Weber</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="mafunction()">
+        
+        <div class="grid-container">    <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">        <!--Haut de page qui contient Menu, connexion et titre-->
+                
+                <div style="background-image: url('bridge.jpg')">
+                    <div class="connexion">         <!-- L'entete est la même pour toute les pages du site -->
+                    
+                        <button>S'identifier</button>
+                        <button>S'inscrire</button>
+                    
+                    </div>
+                
+                    <div class="menu">
+                        <br/>
+                      <button><a href="index.html">Mon CV</a></button><br/>
+                      <button><a href="pageperso.html">Projets</a></button><br/>
+                      <button><a href=contact.html>Me contacter</a></button>
+                    </div>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <div class="titre" id="titre">
+                        Bienvenue
+                    </div>
+                    <br/><br/><br/><br/>
+                </div>
+            </div>
+              
+             <div class="corps">    <!--Corps de la page qui contient ce qui nous interesse-->
+                
+                <div class="grid-header">
+                    
+                    <div class="photo" id="photo">
+                        <img style="float:left;" src="moi1.png" width="150" height="150" alt="ma photo" title="coucou">     <!--Ma photo-->
+                    </div>
+                    
+                    <div class="prenom" id="prenom">
+                        Mathieu
+                    </div> 
+                        
+                    <div class="nom" id="nom">
+                        Weber
+                    </div>
+                 
+                    <div class="logo" id="logo">
+                        <a href='https://www.linkedin.com/in/mathieu-weber-7b6b23129/' target="_blank">         <!--Lien vers mon Linkedin-->
+                        <img src="logolink.png" width="50" height="50" alt="linkedin">                   <!-- Affichage du logo Linkedin-->
+                    </a>
+                    </div>
+                    
+                   
+                    <div class="age" id="age">
+                        22
+                    </div>
+                    <div class="ans" id="ans">
+                        ans
+                    </div>
+                
+                </div>
+                <hr>
+                 <br/>
+                <div class="text" id="descri"> 
+                    Prix du numérique au concours « les entrepreneuriales » avec le projet Barbooze.
+                    Étudiant en 1ère année de cycle ingénieur à l’ISEN, je suis attiré par les technologies Blockchain et Smart Contracts.
+                    Recherche activement un stage dans les secteurs de bases de données, développement logiciel, développement Web, nouvelles technologies, Blockchain, Smart Contracts.
+                </div>   
+                <br/>
+                <hr>
+                <h3>
+                    Experience professionnelle
+                </h3>
+                
+                <div class="item1" id="item1">
+                    CEO Barbooze
+                    <br/>
+                    depuis 2017 
+                </div>
+                <br/>
+                <div class="item1" id="item2">
+                    Barman/Serveur 
+                    <br/>
+                    Darko Beach, été 2016
+                </div>
+       
+                <br/><hr>
+                <h3>
+                    Formation
+                </h3>
+                
+                <div class="item1" id="f1">
+                    1ère année de cycle ingénieur 
+                    <br/>ISEN Toulon 2017-2018
+                </div>
+                <br/>
+                <div class="item1" id="f2">
+                    Cycle préparatoire 
+                    <br/>ISEN Toulon 2014-2017
+                </div>
+                <br/>
+                <div class="item1" id="f3">
+                    Baccalauréat scientifique <br/> Lycée Jean Moulin 2014
+                </div>
+                <br/><hr>
+                <h3>Compétences</h3>
+                <div class="item1" id="skills">
+                    HTML CSS, C, Java, SQL, Linux <br/><br/>
+                    Anglais maitrisé
+                    
+                </div>
+                <br/>
+               
+                
+                    
+               
+                <hr>    
+            </div>
+            
+            <div class="pieds">                 <!-- Bas de page qui contient copyrihts et le plan du site -->
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+  
+        </div>
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Administration du site
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                Renseignez les champs ci-dessous.<br/>
+                <br/>
+                <form name="myForm" onsubmit="return validateForm()" method="post" >
+                    Prénom :<br/>
+                    <input type="text" name="firstname" >
+                    <br>
+                    Nom :<br/>
+                    <input type="text" name="lastname">
+                    <br>
+                    Age :<br/>
+                    <input type="text" name="age">
+                    <br/>
+                    Adresse mail:<br/>
+                    <input type="text" name="email">
+                    <br/><br/>
+                    Adresse Linkedin : <br/>
+                    <input type="text" name="link">
+                    <br/><br/>
+                    Télécharger votre photo :<br/><br/>
+                    <input id="file" type="file" multiple />
+                    <br/><br/>
+                  
+                    
+                    
+                    Texte de présentation vous décrivant:<br/>
+                    <textarea id="p" name="descri" style="width:400px; height:100px;"></textarea>   <!-- Zone plus grande -->
+                    
+                    <br><br/>
+                    Expérience professionnelle 1 :<br/>
+                    <textarea id="q" name="p1" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    Expérience professionnelle 2 :<br/>
+                    <textarea id="r" name="p2" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    
+                    Formation 1 : <br/>
+                    <textarea id="l" name="f1" style="width:400px; height:100px;"></textarea>
+                    
+                    
+                    <br/><br/>
+                    Formation 2 : <br/>
+                    <textarea id="m" name="f2" style="width:400px; height:100px;"></textarea>
+                    
+                    
+                    <br/><br/>
+                     Formation 3 : <br/>
+                    <textarea id="n" name="f3" style="width:400px; height:100px;"></textarea>
+                    
+                    <br/><br/>
+                    
+                    Compétences (Séparer avec des virgules) : <br/>
+                    <textarea id="o" name="skills" style="width:400px; height:100px;"></textarea>
+                    
+                    <br/><br/>
+                    
+                    
+                    
+                    
+                    
+                    <input type="submit">
+                </form>
+                    
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+        </div>
+        <script src="JS/newjavascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+@font-face {
+    font-family:'Ubuntu';
+src: url(Ubuntu-R.ttf);
+}
+
+h1{
+    
+    text-align:center;
+}
+
+h2{
+    text-align: center;
+    
+}
+
+.entete{
+    grid-column: 1/span4;
+    grid-row:1;
+    text-align: center;
+    
+    
+}
+
+.text{
+    font-size: large;
+}
+
+.item1 {
+    text-align:center;
+    font-size:large;
+}
+
+
+body{
+    background-color: black;
+    font-family: Ubuntu;
+    color:whitesmoke; 
+}
+
+.menu{
+    grid-column:1;
+    grid-row:1;
+    text-align: left;
+}
+
+.connexion{
+    grid-column:4;
+    grid-row:1;
+    text-align:right;
+    padding:10px;
+    
+}
+
+.titre{
+    grid-column:1/span2;
+    grid-row:1;
+    text-align: center;
+    font-size:80px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color:black;
+  grid-gap:5px;
+  
+}
+
+
+
+.grid-container > div {
+  background-color: rgb(79,79,79);
+  
+  
+  
+}
+
+.corps {
+  grid-column: 1/span4;
+  grid-row: 3;
+  text-align:center;
+  font-size:30px;
+  padding:50px;
+}
+
+.grid-header{
+ display:grid;
+grid-template-columns:100px 230px 200px 10px;
+grid-template-rows: 80px 80px;
+background-color:rgb(79,79,79);
+
+}
+
+.photo{
+    background-color: rgb(79,79,79);
+    grid-column:1;
+    grid-row:1/span2; 
+}
+
+.prenom{
+    
+    grid-column:2/span2;
+    grid-row:1;
+}
+
+.nom{
+    
+    grid-column:3/span3;
+    grid-row:1;
+}
+.age{
+    grid-column:1/span2;
+    grid-row:2;
+}
+
+.ans{
+    grid-column:2/span3;
+    grid-row:2;
+}
+.logo{
+    grid-column:4/span4;
+    grid-row:1;
+}
+
+.grid-header > div{
+    
+}
+
+.pieds{
+    grid-column:1/span4;
+    grid-row:4;
+    text-align: center; 
+}
+
+.question{
+    grid-column:1;
+    grid-row:2;
+}
+
+.coord{
+    grid-colum:2/span4;
+    grid-row:2;
+}
+  
+.tab{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}
+ 
+.logos{
+    text-align:center;
+}
+  

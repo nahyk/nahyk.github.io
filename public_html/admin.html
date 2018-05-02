@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Administration du site</title>
+    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"/>
+        <script src="JS/newjavascript.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
+            
+            <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
+                <div class="connexion">
+                    <button>S'identifier</button>
+                    <button>S'inscrire</button>
+                </div>
+                <div class="titre">
+                    Administration du site
+                </div>
+                <div class="menu">
+                    <button><a href="index.html">Mon CV</a></button><br/>
+                    <button><a href="pageperso.html">Projets</a></button><br/>
+                    <button><a href=contact.html>Me contacter</a></button>
+                </div>
+                <hr>
+            </div> 
+            
+            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                Renseignez les champs ci-dessous.<br/>
+                <br/>
+                <form name="myForm" onsubmit="return validateForm()" method="post" >
+                    Prénom :<br/>
+                    <input type="text" name="firstname" >
+                    <br>
+                    Nom :<br/>
+                    <input type="text" name="lastname">
+                    <br>
+                    Age :<br/>
+                    <input type="text" name="age">
+                    <br/>
+                    Adresse mail:<br/>
+                    <input type="text" name="email">
+                    <br/><br/>
+                    Adresse Linkedin : <br/>
+                    <input type="text" name="link">
+                    <br/><br/>
+                    
+                    
+                    Texte de présentation vous décrivant:<br/>
+                    <textarea name="descri" style="width:400px; height:100px;"></textarea>   <!-- Zone plus grande -->
+                    <br><br/>
+                    Expérience professionnelle 1 :<br/>
+                    <textarea name="p1" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    Expérience professionnelle 2 :<br/>
+                    <textarea name="p2" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    Formation 1 : <br/>
+                    <textarea name="f1" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    Formation 2 : <br/>
+                    <textarea name="f2" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                     Formation 3 : <br/>
+                    <textarea name="f3" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    
+                    Compétences (Séparer avec des virgules) : <br/>
+                    <textarea name="skills" style="width:400px; height:100px;"></textarea>
+                    <br/><br/>
+                    
+                    
+                    
+                    
+                    
+                    <input type="submit">
+                </form>
+                    
+            </div>
+            
+            <div class="pieds">
+                <hr>
+                <button>Copyrights</button>
+                <button>Plan</button>
+                <button><a href="admin.html">Admin</a></button>
+            </div>
+        </div>
+    </body>
+</html>
