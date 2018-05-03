@@ -20,7 +20,7 @@
                 <div class="titre">
                     Administration du site
                 </div>
-                <div class="menu">
+                <div class="menu">              <!-- Boutons du menu -->
                     <button><a href="index.html">Mon CV</a></button><br/>
                     <button><a href="pageperso.html">Projets</a></button><br/>
                     <button><a href=contact.html>Me contacter</a></button>
@@ -28,11 +28,13 @@
                 <hr>
             </div> 
             
-            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+                            <!-- ------------------PAGE ADMIN --------------------->
+            
+            <div class="admin">             <!-- Module pour renseigner ses coordonnées et envoyer un message -->
                 Renseignez les champs ci-dessous.<br/>
                 <br/>
-                <form name="myForm" onsubmit="return validateForm()" method="post" >
-                    Prénom :<br/>
+                <form name="myForm" onsubmit="return validateForm()" method="post" >        <!-- formulaire appelé myForm qui appelle la fonction validateForm() -->
+                    Prénom :<br/>                                                           <!-- method="post" car on ne veut pas passer par l'url mais bien par HTML -->
                     <input type="text" name="firstname" >
                     <br>
                     Nom :<br/>
@@ -76,7 +78,7 @@
                     
                     
                     
-                    <input type="submit">
+                    <input type="submit">           <!-- Bouton valider -->
                 </form>
                     
             </div>
@@ -88,5 +90,7 @@
                 <button><a href="admin.html">Admin</a></button>
             </div>
         </div>
+                        <!-- FIN PAGE ADMIN -->
+        
     </body>
 </html>

@@ -21,7 +21,7 @@
                 <div class="titre">
                     Projets
                 </div>
-                <div class="menu">
+                <div class="menu">                   <!-- Boutons du menu -->
                     <button><a href="index.html">Mon CV</a></button><br/>
                     <button><a href="pageperso.html">Projets</a></button><br/>
                     <button><a href=contact.html>Me contacter</a></button>
@@ -35,9 +35,9 @@
                 </div>
                 <br/>
         
-                <div class="tab">   <!-- Tableau de mes différents projets -->
-                    <div class="case1">         <!-- 1er Projet-->
-                        <a href="Algo.html">    <!--lien vers la page-->
+                <div class="tab">                          <!-- Tableau de mes différents projets -->
+                    <div class="case1">                     <!-- 1er Projet-->
+                        <a href="Algo.html">                <!--lien vers la page-->
                             <img style="float" src="demin.gif" width="180" height="210" alt="Projet Algo">      <!-- Logo du projet-->
                             <br/>
                         </a>
@@ -66,6 +66,10 @@
             </div>
   
         </div>
+        
+                                        <!-- --------------PAGE ADMIN -------------------- -->
+        
+        
         <div class="grid-container">        <!-- Tableau pour ordonner notre site -->
             
             <div class="entete">             <!--Haut de page qui contient Menu, connexion et titre-->
@@ -84,10 +88,11 @@
                 <hr>
             </div> 
             
-            <div class="admin">    <!-- Module pour renseigner ses coordonnées et envoyer un message -->
+            <div class="admin">             <!-- Module pour renseigner ses coordonnées et envoyer un message -->
                 Renseignez les champs ci-dessous.<br/>
                 <br/>
-                <form name="myProjectForm" onsubmit="return validateProjetForm()" method="post" >
+                
+                <form name="myProjectForm" onsubmit="return validateProjetForm()" method="post" >  <!-- Formulaire spécifique à la page html -->
                     Nom de votre 1er projet :<br/>
                     <input type="text" name="Projet1" >
                     <br>
@@ -99,7 +104,7 @@
                     <br/>
                     <br/>
                     
-                    <input type="submit">
+                    <input type="submit">           <!-- Bouton valider -->
                 </form>
                     
             </div>
@@ -111,5 +116,7 @@
                 <button><a href="admin.html">Admin</a></button>
             </div>
         </div>
+                                        
+                                        <!-- FIN PAGE ADMIN -->
     </body>
 </html>
