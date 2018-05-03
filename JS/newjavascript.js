@@ -1,12 +1,12 @@
-function VerifMail(adresse)
+function VerifMail(adresse)  //Fonction qui retourne true si email valide, false sinon
 {
 	
 	valide1 = false;
 	for(var j=1;j<(adresse.length);j++) {
-            if(adresse.charAt(j)==='@') {
+            if(adresse.charAt(j)==='@') { //Détection du caractère "@"
                 if(j<(adresse.length-4)) {
                     for(var k=j;k<(adresse.length-2);k++) {
-                        if(adresse.charAt(k)==='.') valide1=true;
+                        if(adresse.charAt(k)==='.') valide1=true;   //Détection du caractère "."
                     }
                 }
             }
@@ -25,15 +25,15 @@ function VerifMail(adresse)
 
 
 
-function validateContactForm(){
+function validateContactForm(){     // Formulaire de la page contact.html
     var c = document.forms["contactForm"]["email"].value;
     var b = document.forms["contactForm"]["firstname"].value;
     var a = document.forms["contactForm"]["lastname"].value;
     
     if(b!==""){
         if(a!==""){
-            if(c!=="" && VerifMail(c)===true){
-                alert("Message envoyé");
+            if(c!=="" && VerifMail(c)===true){ //Si prénom, nom et email sont validés 
+                alert("Message envoyé");        //Tout est OK
             }
             else{
                 alert("Veuillez saisir un adresse email valide.");
@@ -49,45 +49,35 @@ function validateContactForm(){
     return false;
 }
 
-function validateProjetForm(){
+function validateProjetForm(){          // Formulaire de pageperso.html
     
-    var pro1=document.forms["myProjectForm"]["Projet1"].value;
-    document.getElementById("NomProjet1").innerHTML=pro1;
+    var pro1=document.forms["myProjectForm"]["Projet1"].value;  //On récupère le nouveau nom du 1er projet
+    document.getElementById("NomProjet1").innerHTML=pro1;       //On remplace l'ancien par le nouveau
     
     var pro2=document.forms["myProjectForm"]["Projet2"].value;
     document.getElementById("NomProjet2").innerHTML=pro2;
     
+    return false;       // Permet de ne pas rafraichir la page 
+    
+}
+
+function validateProAlForm(){    //Formulaire de la page Algo.html
+                                    //Formulaire fonctionne mais les données envoyées ne restent qu'une fraction de seconde (voir commentaire Algo.html
+    var nameproAl = document.forms["myProAlForm"]["nameProAl"].value;
+    document.getElementById("titreproAl").innerHTML = nameproAl;
+    
+    var textproAl = document.getElementById('descriproAl').value.replace(/\n/g, "<br />");
+    document.getElementById("textproAl").innerHTML = textproAl;
+    
     return false;
 }
 
-/*function validateProjet1Form(){       Pareil le return false ne fonctionne pas ...
+function validateForm() { //Formulaire de la page index.html
     
-    var namepro1=document.forms["myProject1Form"]["nameProjet1"].value;
-    document.getElementsById("titrepro1").innerHTML=namepro1;
+    var x = document.forms["myForm"]["firstname"].value;        //On récupère les nouvelles données saisies
+    document.getElementById("prenom").innerHTML = x;            //On remplace les anciennes données par les nouvelles
     
-    var textpro1 = document.getElementById('Projet2').value.replace(/\n/g, "<br />");
-    document.getElementById("descriproject1").innerHTML = textpro1;
-    
-    return false;
-}*/
-
-/*function validateProjet2Form(){           Même avec le return false ça m'envoie Err_Empty_Response
-    
-    var namepro2 = document.forms["myProject2Form"]["nameProject1"].value;
-    document.getElementById("prenom").innerHTML = namepro2;
-    
-    var textpro2 = document.getElementById('descriproject1').value.replace(/\n/g, "<br />");
-    document.getElementById("textpro1").innerHTML = textpro2;
-    
-    return false;
-}*/
-
-function validateForm() {
-    
-    var x = document.forms["myForm"]["firstname"].value;
-    document.getElementById("prenom").innerHTML = x;
-    
-    var y = document.forms["myForm"]["lastname"].value;
+    var y = document.forms["myForm"]["lastname"].value;         //Pareil pour chaque champ
     document.getElementById("nom").innerHTML = y;
     
     var z = document.forms["myForm"]["age"].value;
